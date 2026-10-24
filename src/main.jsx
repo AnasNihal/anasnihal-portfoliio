@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Instagram, Menu, X, Play } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import ProjectArt from './ProjectArt';
 import AttentionAnimation from './AttentionAnimation';
 import './styles.css';
@@ -68,6 +69,7 @@ function App(){
   <AttentionAnimation/>
  </main>
  <footer><div className="footer-nav"><button onClick={()=>nav('about')}>ABOUT</button><button onClick={()=>nav('work')}>WORKS</button><button onClick={()=>nav('contact')}>CONTACT</button></div><div className="footer-bottom frame"><div><Eyebrow>ELSEWHERE</Eyebrow><External href={instagram}>INSTAGRAM ↗</External><External href={github}>GITHUB ↗</External><External href={linkedin}>LINKEDIN ↗</External></div><div><Eyebrow>COLOPHON</Eyebrow><span>© {new Date().getFullYear()} ANAS NIHAL. BUILT WITH INTENTION.</span></div></div><div className="footer-signature">anas.</div></footer>
+ <Analytics />
  </>
 }
 createRoot(document.getElementById('root')).render(<App/>);
