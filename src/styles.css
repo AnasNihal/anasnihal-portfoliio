@@ -55,3 +55,22 @@
 }
 .service-image>video{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 
+/* Keep the footer's fine rules consistent through both color themes. */
+footer{--line:color-mix(in srgb,var(--bg) 38%,transparent)}
+footer .frame{width:calc(100% - 16.6667vw);max-width:none}
+.footer-nav{height:clamp(130px,9.5vw,270px);border-bottom:1px solid var(--line)}
+.footer-nav button{border-right:1px solid var(--line)}
+.footer-bottom{min-height:clamp(210px,19.5vw,400px)}
+.footer-bottom>div{justify-content:space-between;padding:clamp(38px,4vw,85px) 22px}
+.footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.footer-bottom .footer-links a{font-size:clamp(16px,1.45vw,28px);line-height:1.2}
+.footer-bottom>div:last-child>span:last-child{font:clamp(10px,.75vw,14px) 'DM Mono',monospace;letter-spacing:.12em}
+.footer-signature{border-top:1px solid var(--line)}
+@media(max-width:640px){
+  footer .frame{width:calc(100% - 30px)}
+  .footer-nav{height:80px}
+  .footer-bottom>div{min-height:180px;padding:25px 10px}
+  .footer-bottom>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+  .footer-bottom .footer-links a{font-size:17px}
+}
+
